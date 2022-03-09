@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 
 const app = express();
 
-const accessTokenSecret = 'somerandomaccesstoken';
-const refreshTokenSecret = 'somerandomstringforrefreshtoken';
+const accessTokenSecret = process.env.ACCESSTOKENSECRET
+const refreshTokenSecret = process.env.REFRESHTOKENSECRET
 
 const users = [
     {
