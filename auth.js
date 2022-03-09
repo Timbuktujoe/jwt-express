@@ -1,11 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-
+require("dotenv").config()
 const app = express();
 
-const accessTokenSecret = process.env.ACCESSTOKENSECRET
-const refreshTokenSecret = process.env.REFRESHTOKENSECRET
+const accessTokenSecret = process.env.JWT_SECRET
+const refreshTokenSecret = process.env.JWT_REFRESHSECRET
 
 const users = [
     {
